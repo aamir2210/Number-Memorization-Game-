@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Number Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <div id="start-screen" class="screen active">
+      <h1>Number Game</h1>
+      <div class="home-screen">
+        <div class="leaderboard-box">
+          <h3>Leaderboard</h3>
+          <ol id="leaderboard-list"></ol>
+        </div>
+      
+        <div class="options">
+          <label>Username: <input type="text" id="username" /></label>
+          <div class="slider-wrapper" data-var="seq-length">
+            <span class="label">Sequence length</span>
+        </div>
+    
+        <div class="slider-wrapper" data-var="timer">
+            <span class="label">Timer</span>
+        </div>
+    
+        <div class="slider-wrapper" data-var="length-change">
+            <span class="label">Length change</span>
+        </div>
+    
+        <div class="slider-wrapper" data-var="timer-change">
+            <span class="label">Timer change</span>
+        </div>
+          <button id="play-btn">Play Game</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="display-screen" class="screen hidden">
+      <div class="top-bar">
+        <span id="score">0 pts</span>
+        <span id="timer"></span>
+        <button id="clear-score" style="position: absolute; bottom: 20px; left: 20px; display: flex; align-items: center; gap: 6px;">
+          🔄 <span style="font-size: 0.9rem;">Clear Score</span>
+        </button>        
+      </div>
+      <div id="sequence-display"></div>
+      <button id="hide-btn">Hide</button>
+    </div>
+
+    <div id="recall-screen" class="screen hidden">
+      <div class="top-bar">
+        <span id="score-recall">0 pts</span>
+        <span id="timer-recall"></span>
+      </div>
+      <input id="recall-input" type="text" pattern="[0-9]*" />
+      <button id="recall-btn">Recall</button>
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+      <h2 id="result-msg">&lt;RESULT&gt;</h2>
+      <p>Press anywhere to continue</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
